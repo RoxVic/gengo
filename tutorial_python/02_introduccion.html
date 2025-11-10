@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../css/styles.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=content_copy" />  <link rel="stylesheet" href="../css/styles.css">
+
+  
+  <title>Introducción a Python</title>
+</head>
+<body>
+  <header>
+    <nav class="navbar">
+      <div class="menu-toggle" id="menu-toggle">
+        ☰
+      </div>
+      <div class="logo">
+        <img src="../img/logo2-recortada-sin-fondo.png" alt="Logo del sitio">
+      </div>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="01_guia_tutorial.html">Inicio</a></li>
+        <li><a href="02_introduccion.html">Introducción a Python</a></li>
+        <li><a href="03_tipos_de_dato_y_variable.html">Tipos de datos y variables</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+      </ul>
+</nav>
+  </header>
+  <h1>Introducción al lenguaje de programación Python</h1>
+
+  <p>Existen distintos lenguajes de programación que podemos clasificar en dos grandes grupos: <b>lenguajes de alto nivel</b> y <b>lenguajes de bajo nivel</b>.</p>
+
+  <ul>
+    <li>
+      <p><b>Lenguajes de alto nivel:</b> Su sintaxis se parece más al lenguaje natural, por lo que son más fáciles de aprender, leer y escribir.</p>
+    </li>
+    <li>
+      <p><b>Lenguajes de bajo nivel:</b> Su sintaxis se asemeja más al lenguaje de máquina. Requieren conocer el hardware, así como los registros y direcciones de memoria, lo que los hace más difíciles de escribir y comprender.</p>
+    </li>
+  </ul>
+
+  <p>Python pertenece al grupo de los lenguajes de alto nivel. Esta es una de las muchas razones por las que es uno de los favoritos para aprender a programar.</p>
+
+  <p>Dentro de los lenguajes de alto nivel existen dos tipos de programas que traducen nuestro código al lenguaje de máquina: los <b>intérpretes</b> y los <b>compiladores</b>.</p>
+
+  <div class="targeta">
+    <p>Un <b>intérprete</b> lee nuestro código línea por línea y lo va traduciendo a lenguaje de máquina, ejecutando cada instrucción en el momento.</p>
+    <img src="../img/interprete.png">
+  </div>
+  <div class="targeta">
+    <p>Un <b>compilador</b>, en cambio, toma todo el código, lo traduce completo a lenguaje de máquina y genera un archivo ejecutable. Luego, ese archivo se puede ejecutar directamente sin necesidad de volver a traducirlo.</p>
+    <img src="../img/compilador.png">
+  </div>
+  <div class="targeta">
+    <p>Python se considera un <b>lenguaje interpretado</b>, ya que sus programas se ejecutan a través de un intérprete.</p>
+    <img src="../img/inicio-python.png">
+  </div>
+  <h2>Escribamos nuestro primer programa</h2>
+
+  <p>En todos los lenguajes de programación solemos comenzar con el clásico “Hello, World!”, que básicamente muestra un mensaje en pantalla.</p>
+
+  <p>En Python, la instrucción para mostrar algo en pantalla es:</p>
+  <div class="bloque-codigo">
+  <div class="codigo" id="codigo0">
+    <pre><code>
+print()
+    </code></pre>
+  </div>
+</div>
+
+  <p>Es importante escribir esta instrucción tal cual, todo en minúsculas y con paréntesis. El mensaje que quieres mostrar se coloca dentro de los paréntesis, entre comillas:</p>
+
+  <div class="bloque-codigo">
+  <div class="codigo" id="codigo1">
+    <button class="buton-copi" title="Copiar" onclick="copiarTexto('codigo1')">
+      <span class="material-symbols-outlined">content_copy</span>
+    </button>
+    <div class="mensaje-copiado">¡Copiado!</div>
+    <pre><code>
+print("Hello, world!")
+    </code></pre>
+  </div>
+  <div class="pantalla">
+    <p>Hello, word!</p>
+  </div>
+</div>
+  
+
+  <h2>Ejemplos</h2>
+
+  <p>Vamos a escribir un código que muestre: Bienvenido a Python.</p>
+
+  <div class="bloque-codigo">
+  <div class="codigo" id="codigo2">
+    <button class="buton-copi" title="Copiar" onclick="copiarTexto('codigo2')">
+      <span class="material-symbols-outlined">content_copy</span>
+    </button>
+    <div class="mensaje-copiado">¡Copiado!</div>
+    <pre><code>
+print("Bienvenido a Python")
+    </code></pre>
+  </div>
+  <div class="pantalla">
+    <p>Bienvenido a Python</p>
+  </div>
+</div>
+
+  <h2>Ejercicio propuesto</h2>
+
+  <p>Escribe un programa que muestre: ¡Felicidades! Ya diste tus primeros pasos en el mundo de la programación. </p>
+
+    <div class="bloque-codigo">
+  <div class="codigo" id="codigo3">
+    <button class="buton-copi" title="Copiar" onclick="copiarTexto('codigo3')">
+      <span class="material-symbols-outlined">content_copy</span>
+    </button>
+    <div class="mensaje-copiado">¡Copiado!</div>
+    <pre><code>
+print("¡Felicidades! Ya diste tus primeros pasos en el mundo de la programación")
+    </code></pre>
+  </div>
+  <div class="pantalla">
+    <p>¡Felicidades! Ya diste tus primeros pasos en el mundo de la programación</p>
+  </div>
+</div>
+
+<br>
+<br>
+
+<div class="contenedor-boton">
+  <a href="01_guia_tutorial.html" class="boton-siguiente">Anterior lección</a>
+  <a href="03_tipos_de_dato_y_variable.html" class="boton-siguiente">Siguiente lección</a>
+</div>
+
+  <footer>
+    <p>© 2025 Curso de Introducción a Python</p>
+  </footer>
+
+  <script src="../js/script.js"></script>
+</body>
+</html>

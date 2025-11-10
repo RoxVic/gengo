@@ -1,0 +1,387 @@
+:root {
+  --font-title: 'Inter', sans-serif;
+  --font-text: 'Inter', sans-serif;
+  --font-code: 'JetBrains Mono', monospace;
+}
+html, body {
+  height: 100%;
+  margin: 0;
+}
+/* ----- NAVBAR (versión móvil) ----- */
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content:start ;
+  background-color: #f1f1f1;
+  color: white;
+  padding: 10px 16px;
+  position: relative;
+}
+
+/* Botón de menú */
+.menu-toggle {
+  font-size: 24px;
+  cursor: pointer;
+}
+
+/* Logo y nombre */
+.logo {
+  display: flex;
+  align-items:flex-start ;
+  gap: 8px;
+}
+
+.logo img {
+  height: 50px;
+}
+
+.logo span {
+  font-weight: 600;
+  font-size: 18px;
+}
+
+/* Lista de enlaces oculta en móvil */
+.nav-links {
+  display: none;
+  flex-direction: column;
+  background-color: #4bbfbe;
+  position: absolute;
+  top: 60px;
+  left: 0;
+  width: 100%;
+  padding: 10px 0;
+  margin: 0;
+  list-style: none;
+}
+
+.nav-links li {
+  text-align: center;
+  margin: 10px 0;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+/* Mostrar menú cuando se active */
+.nav-links.show {
+  display: flex;
+}
+
+body {
+  background-color: #fff;
+  line-height: 1.6;
+  padding-top: 60px; /* ✅ altura aproximada del navbar */
+}
+h1 {
+
+  font-size: 2rem;       /* 32px */
+  font-weight: 700;
+  color: #002333;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+h2 {
+  font-size: 1.5rem;     /* 24px */
+  font-weight: 600;
+  color: #159A9C;
+  margin-top: 2rem;
+  margin-bottom: 0.8rem;
+}
+
+h3 {
+  font-size: 1.25rem;    /* 20px */
+  font-weight: 600;
+  color: #4bbfbe;
+  margin-top: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+ul {
+  list-style: none;
+  padding-left: 0;
+  margin-left: 0;
+}
+
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 24
+}
+
+
+/* Párrafos */
+p {
+  font-size: 1.2rem;       /* 16px */
+  font-weight: 400;
+  color: #202123;
+  margin-bottom: 1rem;
+  
+}
+
+/* Texto pequeño */
+small {
+  font-size: 0.875rem;   /* 14px */
+  color: #555;
+}
+/* .bloque-codigo {
+    width: 100vw;
+    height: 100vh;
+    background-color: #f5f5f5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+} */
+.bloque-codigo {
+  margin-bottom: 20px;
+  padding: 0;
+}
+.codigo {
+  position: relative;
+  width: 100%;
+  height: 90%;
+  background-color: #202123;
+  border-radius: 12px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+  overflow: hidden;           /* evita que el contenido saque scroll a la página */
+  box-sizing: border-box;
+  padding: 0px;              /* espacio interior (deja sitio para el botón) */
+}
+
+/* Estilos específicos para <pre> (área de código con su propio scroll) */
+.codigo pre {
+  margin: 0;
+  padding: 16px;
+  background-color: #2a2b2e;
+  color: #e9c46b;
+  font-family: var(--font-code);
+  font-size: 0.95rem;
+  border-radius: 8px;
+  box-sizing: border-box;
+
+  /* clave: limitar la altura dentro de .codigo y permitir scroll solo en este elemento */
+  max-height: calc(100% - 8px); /* deja un pequeño margen dentro de .codigo */
+  width: 100%;
+
+  overflow: auto;      /* muestra barras de desplazamiento solo dentro del <pre> */
+  white-space: pre;    /* conserva espacios y saltos; permite scroll horizontal */
+  word-break: normal;  /* evita romper palabras largas, fuerza scroll horizontal */
+}
+
+.pantalla {
+  width: 99%;
+  height: 90%;
+  background-color: #f8f9fa;
+  border-left: 4px solid #d1d5da;
+  border-radius: 0 0 12px 12px;
+  padding: 5px 5px;
+  overflow: auto; /* ✅ scroll si se desborda */
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+.pantalla p{
+  font-family: var(--font-code);
+  font-size: 0.95rem;
+  color: #202123;
+}
+
+/* Scrollbars más discretas (WebKit) — opcional */
+.codigo pre::-webkit-scrollbar {
+  height: 10px; /* para scrollbar horizontal */
+  width: 10px;  /* para scrollbar vertical */
+}
+.codigo pre::-webkit-scrollbar-thumb {
+  background: rgba(255,255,255,0.10);
+  border-radius: 6px;
+}
+.codigo pre::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+/* Botón copiar colocado en esquina superior derecha dentro de .codigo */
+.buton-copi {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  z-index: 10;
+  background-color: #4285f4;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 8px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: box-shadow 0.18s ease, transform 0.08s ease, background-color 0.18s;
+}
+
+/* Efecto de iluminación al hover del botón */
+.buton-copi:hover {
+  box-shadow: 0 0 16px 6px rgba(66,133,244,0.12);
+  transform: translateY(-2px);
+}
+
+/* tamaño del icono material */
+.buton-copi .material-symbols-outlined {
+  font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+  font-size: 18px;
+  line-height: 1;
+}
+
+.mensaje-copiado {
+  position: absolute;
+  top: 10px;
+  right: 60px; /* un poco a la izquierda del botón */
+  background-color: rgba(52, 168, 83, 0.9); /* verde suave */
+  color: white;
+  padding: 4px 10px;
+  border-radius: 6px;
+  font-size: 0.85rem;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.4s ease, transform 0.4s ease;
+  transform: translateY(-5px);
+}
+
+/* cuando se activa */
+.mensaje-copiado.mostrar {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+.targeta {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: left;
+  background-color: #f9f9f9;
+  border-radius: 12px;
+  padding: 16px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.targeta:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 10px rgba(0,0,0,0.15);
+}
+
+.targeta img {
+  
+  max-width: 400px;
+  height: auto;
+  border-radius: 10px;
+  margin-top: 12px;
+}
+
+/* ====== BOTÓN SIGUIENTE LECCIÓN ====== */
+.contenedor-boton {
+  display: flex;
+  justify-content:space-evenly;
+  margin-top: 30px;
+}
+
+.boton-siguiente {
+  display: inline-block;
+  background-color: #4bbfbe;
+  color: white;
+  font-weight: 600;
+  font-size: 1rem;
+  padding: 10px 18px;
+  border-radius: 10px;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.15);
+}
+
+.boton-siguiente:hover {
+  background-color: #37a7a4;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+
+.imagen-ajustada {
+  width: 80%;    /* La imagen ocupará todo el ancho disponible */
+  height: auto;   /* Mantiene la proporción original */
+}
+
+.nota {
+  background-color: #fff3cd;   /* Color amarillo claro tipo nota */
+  border-left: 4px solid #ffcc00;
+  padding: 10px;
+  margin: 15px 0;
+  border-radius: 6px;
+  font-family: 'Inter', sans-serif;
+}
+
+/* ----- VISTA DE ESCRITORIO ----- */
+@media (min-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    width: 220px;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 20px;
+  }
+
+  .menu-toggle {
+    display: none; /* ya no se necesita */
+  }
+
+  .logo {
+    margin-bottom: 40px;
+  }
+
+  .nav-links {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    position: static;
+  }
+
+  .nav-links li {
+    margin: 15px 0;
+    text-align: left;
+    padding: 10px;
+  }
+
+  .nav-links a {
+    color: white;
+    font-size: 16px;
+  }
+
+  body {
+  margin-right: 10px;
+  margin-left: 300px; /* espacio para la barra lateral */
+  padding-top: 0; /* ya no necesitamos el padding superior */
+  }
+
+
+
+  .targeta img {
+    max-width: 600px;
+    margin-top: 0;
+  }
+
+  .buton-copi { top: 10px; right: 10px; padding: 6px; }
+  .codigo { padding-top: 48px; } /* deja espacio visual para el botón */
+  .codigo pre { max-height: calc(100% - 16px); font-size: 0.9rem; }
+
+  .imagen-ajustada {
+  display: block;      /* Necesario para poder centrar con margin */
+  margin: 0 5%;      /* Centra horizontalmente */
+  width: 40%;         /* O el tamaño que desees, ej. 80% */
+  height: auto;    /* Mantiene la proporción original */
+}
+}

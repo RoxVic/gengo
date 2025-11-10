@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=content_copy" />  <link rel="stylesheet" href="../css/styles.css">
+  <title>Tipos de dato y variables</title>
+</head>
+<body>
+  <header>
+    <nav class="navbar">
+      <div class="menu-toggle" id="menu-toggle">
+        ☰
+      </div>
+      <div class="logo">
+        <img src="../img/logo2-recortada-sin-fondo.png" alt="Logo del sitio">
+      </div>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="01_guia_tutorial.html">Inicio</a></li>
+        <li><a href="02_introduccion.html">Introducción a Python</a></li>
+        <li><a href="03_tipos_de_dato_y_variable.html">Tipos de dato y variables</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
+  <h1>Tipos de dato y variables</h1>
+  <p>En esta clase vamos a conocer tres tipos de datos muy importantes en Python:
+cadenas de caracteres (strings), enteros (integers) y flotantes (floats).
+
+Estos tres tipos de datos son la base de casi todos los programas que escribimos, ya que con ellos representamos texto, números enteros y números decimales.</p>
+  <ul>
+    <li>
+      <p><b>Cadenas de caracteres (string)</b> Una cadena de caracteres, o string, es un conjunto de letras, palabras, símbolos o números que se representan como texto.
+En Python, siempre se escriben entre comillas, ya sean simples (' ') o dobles (" ").</p>
+      <div class="bloque-codigo">
+        <div class="codigo" id="codigo0">
+          <pre><code>
+"Hola, mundo!"
+"Python"
+"1234"
+"¡Aprender es divertido!"
+          </code></pre>
+        </div>
+      </div>
+      <div class="nota">
+        <b>Nota:</b> Aunque "1234" parece un número, al estar entre comillas, Python lo considera texto, no un valor numérico.
+      </div>
+    </li>
+    <br>
+    <li>
+      <p><b>Números enteros (int)</b> Los enteros, o integers, representan todos los números que no tienen punto decimal.
+Pueden ser positivos, negativos o cero.</p>
+      <div class="bloque-codigo">
+        <div class="codigo" id="codigo0">
+          <pre><code>
+1
+34
+789
+-23
+0
+          </code></pre>
+        </div>
+      </div>
+      <div class="nota">
+        <b>Nota:</b> Se escriben directamente con el número, sin comillas.
+      </div>
+    </li>
+    <br>
+    <li>
+      <p><b>Números flotantes (float):</b> Los flotantes, o floats, representan números que tienen punto decimal.
+También pueden ser positivos o negativos.</p>
+<div class="bloque-codigo">
+        <div class="codigo" id="codigo0">
+          <pre><code>
+1.4
+34.78
+789.89
+-23.5
+
+          </code></pre>
+        </div>
+      </div>
+      <div class="nota">
+        <b>Nota:</b>  Observa que el punto (.) es lo que diferencia a un número flotante de un entero.
+      </div>
+    </li>
+  </ul>
+
+  <h2>Conocer el tipo de dato con type()</h2>
+
+  <p>En Python, podemos saber el tipo de dato de cualquier valor usando la función type().
+
+Por ejemplo: <code>type("Hola, mundo!")</code></p>
+<p>Esta instrucción nos dice qué tipo de dato es "Hola, mundo!".
+Pero si queremos ver el resultado en pantalla, debemos usar la función <code>print()</code>:</p>
+  <div class="bloque-codigo">
+  <div class="codigo" id="codigo1">
+    <button class="buton-copi" title="Copiar" onclick="copiarTexto('codigo1')">
+      <span class="material-symbols-outlined">content_copy</span>
+    </button>
+    <div class="mensaje-copiado">¡Copiado!</div>
+    <pre><code>
+print(type("Hola, mundo!"))
+    </code></pre>
+  </div>
+  <div class="pantalla">
+    <p>&lt;class 'str'&gt; </p>
+  </div>
+</div>
+
+ 
+
+  <h2>Ejemplos prácticos</h2>
+  <p>Copia las siguientes celdas y verifica que obtengas el mismo valor</p>
+
+  <div class="bloque-codigo">
+  <div class="codigo" id="codigo2">
+    <button class="buton-copi" title="Copiar" onclick="copiarTexto('codigo2')">
+      <span class="material-symbols-outlined">content_copy</span>
+    </button>
+    <div class="mensaje-copiado">¡Copiado!</div>
+    <pre><code>
+print(type("Esta es una cadena de caracteres"))
+    </code></pre>
+  </div>
+  <div class="pantalla">
+    <p>&lt;class 'str'&gt; </p>
+  </div>
+</div>
+
+  <div class="bloque-codigo">
+  <div class="codigo" id="codigo3">
+    <button class="buton-copi" title="Copiar" onclick="copiarTexto('codigo3')">
+      <span class="material-symbols-outlined">content_copy</span>
+    </button>
+    <div class="mensaje-copiado">¡Copiado!</div>
+    <pre><code>
+print(type(1352))
+    </code></pre>
+  </div>
+  <div class="pantalla">
+    <p>&lt;class 'int'&gt; </p>
+  </div>
+</div>
+
+  <div class="bloque-codigo">
+  <div class="codigo" id="codigo4">
+    <button class="buton-copi" title="Copiar" onclick="copiarTexto('codigo4')">
+      <span class="material-symbols-outlined">content_copy</span>
+    </button>
+    <div class="mensaje-copiado">¡Copiado!</div>
+    <pre><code>
+print(type(45.78))
+    </code></pre>
+  </div>
+  <div class="pantalla">
+    <p>&lt;class 'float'&gt; </p>
+  </div>
+</div>
+
+  <br>
+  <h2>Variables</h2>
+  <p>A veces queremos guardar un dato para usarlo más adelante.
+Para eso existen las variables, que puedes imaginar como una cajita con un nombre donde guardas algo.
+
+En Python, una variable se define así:</p>
+<img src="../img/variable.png" alt="Descripción de la imagen" class="imagen-ajustada">
+<p>Aquí estamos guardando el texto "Hola, mundo!" dentro de una cajita llamada cajita.</p>
+  <div class="bloque-codigo">
+  <div class="codigo" id="codigo5">
+    <button class="buton-copi" title="Copiar" onclick="copiarTexto('codigo5')">
+      <span class="material-symbols-outlined">content_copy</span>
+    </button>
+    <div class="mensaje-copiado">¡Copiado!</div>
+    <pre><code>
+cajita = "Hola, mundo!"
+    </code></pre>
+  </div>
+</div>
+<h2>Usar el valor de una variable</h2>
+<p>Para usar el contenido guardado, simplemente escribimos su nombre:</p>
+  <div class="bloque-codigo">
+  <div class="codigo" id="codigo6">
+    <button class="buton-copi" title="Copiar" onclick="copiarTexto('codigo6')">
+      <span class="material-symbols-outlined">content_copy</span>
+    </button>
+    <div class="mensaje-copiado">¡Copiado!</div>
+    <pre><code>
+print(cajita)
+    </code></pre>
+  </div>
+  <div class="pantalla">
+    <p>Hola, mundo!</p>
+  </div>
+</div>
+<p>Nota: Asegurate de tener la el codigo de la celda anterior.</p>
+<p>También podemos preguntar qué tipo de dato hay dentro de la variable:</p>
+  <div class="bloque-codigo">
+  <div class="codigo" id="codigo7">
+    <button class="buton-copi" title="Copiar" onclick="copiarTexto('codigo7')">
+      <span class="material-symbols-outlined">content_copy</span>
+    </button>
+    <div class="mensaje-copiado">¡Copiado!</div>
+    <pre><code>
+print(type(cajita))
+    </code></pre>
+  </div>
+  <div class="pantalla">
+    <p>&lt;class 'str'&gt;</p>
+  </div>
+</div>
+
+  <h2>Ejemplos</h2>
+  <p>Escribe un programa que muestre: ¡Felicidades! Ya diste tus primeros pasos en el mundo de la programación. </p>
+    <div class="bloque-codigo">
+  <div class="codigo" id="codigo8">
+    <button class="buton-copi" title="Copiar" onclick="copiarTexto('codigo8')">
+      <span class="material-symbols-outlined">content_copy</span>
+    </button>
+    <div class="mensaje-copiado">¡Copiado!</div>
+    <pre><code>
+entero = 45
+print(entero)
+print(type(entero))
+    </code></pre>
+  </div>
+  <div class="pantalla">
+    <p>45<br>
+&lt;class 'int'&gt;</p>
+  </div>
+</div>
+
+<div class="bloque-codigo">
+  <div class="codigo" id="codigo9">
+    <button class="buton-copi" title="Copiar" onclick="copiarTexto('codigo9')">
+      <span class="material-symbols-outlined">content_copy</span>
+    </button>
+    <div class="mensaje-copiado">¡Copiado!</div>
+    <pre><code>
+decimal = 78.7
+print(decimal)
+print(type(decimal))
+    </code></pre>
+  </div>
+  <div class="pantalla">
+    <p>78.7<br>
+&lt;class 'float'&gt;</p>
+  </div>
+</div>
+<div class="bloque-codigo">
+  <div class="codigo" id="codigo10">
+    <button class="buton-copi" title="Copiar" onclick="copiarTexto('codigo10')">
+      <span class="material-symbols-outlined">content_copy</span>
+    </button>
+    <div class="mensaje-copiado">¡Copiado!</div>
+    <pre><code>
+texto = "Aprendiendo Python"
+print(texto)
+print(type(texto))
+    </code></pre>
+  </div>
+  <div class="pantalla">
+    <p>Aprendiendo Python<br>
+&lt;class 'str'&gt;</p>
+  </div>
+</div>
+
+<h2>Ejercicio propuesto</h2>
+<p>Crea tres variables: una con tu nombre, otra con tu edad y otra con tu altura.  
+Luego muestra su valor y su tipo de dato usando <code>print()</code> y <code>type()</code>.</p>
+
+
+
+<div class="bloque-codigo">
+  <div class="codigo" id="codigo11">
+    <button class="buton-copi" title="Copiar" onclick="copiarTexto('codigo11')">
+      <span class="material-symbols-outlined">content_copy</span>
+    </button>
+    <div class="mensaje-copiado">¡Copiado!</div>
+    <pre><code>
+nombre = "Juan"
+edad = 32
+altura = 1.65
+
+print("Mi nombre es", nombre, "y es de tipo", type(nombre))
+print("Mi edad es", edad, "y es de tipo", type(edad))
+print("Mi altura es", altura, "y es de tipo", type(altura))
+    </code></pre>
+  </div>
+  <div class="pantalla">
+    <p>Mi nombre es Juan y es de tipo &lt;class 'str'&gt;<br>
+    Mi edad es 32 y es de tipo &lt;class 'int'&gt;<br>
+    Mi altura es 1.65 y es de tipo &lt;class 'float'&gt;</p>
+  </div>
+</div>
+
+<div class="nota">
+  <strong>Nota:</strong> Para mostrar más de una cosa dentro de <code>print()</code>, se separan los elementos con comas.
+</div>
+<br>
+<br>
+<div class="contenedor-boton">
+  <a href="02_introduccion.html" class="boton-siguiente">Anterior lección</a>
+  <a href="04_operadores.html" class="boton-siguiente">Siguiente lección</a>
+</div>
+
+<footer>
+  <p>© 2025 Curso de Introducción a Python</p>
+</footer>
+
+
+<script src="../js/script.js"></script>
+</body>
+
+</html>

@@ -73,7 +73,6 @@ html, body {
 body {
   background-color: #fff;
   line-height: 1.6;
-  padding-top: 60px; /* ✅ altura aproximada del navbar */
 }
 h1 {
 
